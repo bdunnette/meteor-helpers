@@ -2,7 +2,7 @@ meteor-helpers
 ==============
 Shell scripts to help with the setup of [Meteor.js](https://www.meteor.com/) applications.
 
-To use from the command line, add the following to your .bashrc (assuming you've installed the scripts in the .meteor-helpers subdirectory of your home directory):
+To use from the command line, add the following to your _.bashrc_ (or _.bash_profile_ for OS X users - assuming you've installed the scripts in the .meteor-helpers subdirectory of your home directory):
 
 ```
 PATH=$PATH:~/.meteor-helpers
