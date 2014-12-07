@@ -1,0 +1,12 @@
+#!/bin/bash
+echo $METEOR_HELPER_PATH
+echo "Creating app $1"
+meteor create $1
+cd $1
+mkdir -p client/lib client/views/common client/styles public/images lib/collections server
+mv $1.css client/styles
+rm $1.html $1.js
+cp $METEOR_HELPER_PATH/defaultRoutes.js lib
+cp $METEOR_HELPER_PATH/appLayout.html $METEOR_HELPER_PATH/navbar.html client/views/common
+cp $METEOR_HELPER_PATH/defaultView.html client/views
+meteor add iron:router ian:bootstrap-3 aldeed:collection2 aldeed:autoform
