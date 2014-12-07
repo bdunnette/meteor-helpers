@@ -1,6 +1,6 @@
 meteor-helpers
 ==============
-Shell scripts to help with the setup of Meteor.js applications
+Shell scripts to help with the setup of [Meteor.js](https://www.meteor.com/) applications.
 
 To use from the command line, add the following to your .bashrc (assuming you've installed the scripts in the .meteor-helpers subdirectory of your home directory):
 
@@ -8,3 +8,7 @@ To use from the command line, add the following to your .bashrc (assuming you've
 PATH=$PATH:~/.meteor-helpers
 export METEOR_HELPER_PATH=~/.meteor-helpers
 ```
+
+Once installed, you can:
++ Create an app: ```meteor-create-app <appName>```
++ Add a collection: ```meteor-add-collection <collectionName>```
