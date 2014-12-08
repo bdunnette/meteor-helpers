@@ -1,0 +1,3 @@
+#!/bin/bash
+METEOR_HELPER_PATH=$(pwd)
+sed -i.bak '$ a\PATH=$PATH:~/'"$METEOR_HELPER_PATH"'\nexport METEOR_HELPER_PATH='"$METEOR_HELPER_PATH"'' ~/.bashrc
