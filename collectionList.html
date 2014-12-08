@@ -1,8 +1,10 @@
 <template name="MyCollectionList">
-{{> quickForm collection="MyCollection" id="insertMyCollectionForm" type="insert"}}
-<ul>
-{{#each myCollection}}
-<li>{{.}}</li>
-{{/each}}
-</ul>
+  {{> quickForm collection="MyCollection" id="insertMyCollectionForm" type="insert"}}
+  <ul>
+    {{#each this}}
+    <li>
+      <a href="{{pathFor 'MyCollectionView'}}">{{title}} - {{description}}</a>
+    </li>
+    {{/each}}
+  </ul>
 </template>

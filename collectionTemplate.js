@@ -36,6 +36,40 @@ MyCollection.deny({
   }
 });
 
+Router.route('/myCollection', function () {
+  this.render('MyCollectionList', {
+    data: function () {
+      return MyCollection.find();
+    }
+  });
+}, {
+  name: 'MyCollectionList'
+});
+
+Router.route('/myCollection/:_id', function () {
+  this.render('MyCollectionView', {
+    data: function () {
+      return MyCollection.findOne({
+        _id: this.params._id
+      });
+    }
+  });
+}, {
+  name: 'MyCollectionView'
+});
+
+Router.route('/myCollection/:_id/edit', function () {
+  this.render('MyCollectionEdit', {
+    data: function () {
+      return MyCollection.findOne({
+        _id: this.params._id
+      });
+    }
+  });
+}, {
+  name: 'MyCollectionEdit'
+});
+
 Meteor.publish("myCollection", function () {
   return MyCollection.find();
 });

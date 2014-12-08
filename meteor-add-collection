@@ -1,6 +1,10 @@
 #!/bin/bash
 cat $METEOR_HELPER_PATH/collectionTemplate.js | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > lib/collections/$1.js
-cat $METEOR_HELPER_PATH/collectionList.html | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1List.html
 cat $METEOR_HELPER_PATH/collectionList.js | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1List.js
+cat $METEOR_HELPER_PATH/collectionList.html | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1List.html
+cat $METEOR_HELPER_PATH/collectionEdit.js | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1Edit.js
+cat $METEOR_HELPER_PATH/collectionEdit.html | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1Edit.html
+cat $METEOR_HELPER_PATH/collectionView.js | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1View.js
+cat $METEOR_HELPER_PATH/collectionView.html | sed 's/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g' > client/views/$1View.html
 sed -i.bak '/<!--COLLECTIONS-->/a\<li><a href="{{urlFor '"'${1^}List'"'}}">'"${1^}"'</a></li>' client/views/common/navbar.html
 
