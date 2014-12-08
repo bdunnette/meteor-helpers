@@ -1,0 +1,8 @@
+<template name="MyCollectionList">
+{{> quickForm collection="MyCollection" id="insertMyCollectionForm" type="insert"}}
+<ul>
+{{#each myCollection}}
+<li>{{.}}</li>
+{{/each}}
+</ul>
+</template>
