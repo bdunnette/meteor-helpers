@@ -69,7 +69,3 @@ Router.route('/myCollection/:_id/edit', function () {
 }, {
   name: 'MyCollectionEdit'
 });
-
-Meteor.publish("myCollection", function () {
-  return MyCollection.find();
-});

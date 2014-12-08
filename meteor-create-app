@@ -10,4 +10,4 @@ cp $METEOR_HELPER_PATH/defaultRoutes.js lib
 cat $METEOR_HELPER_PATH/appLayout.html | sed 's/MyApp/'"$1"'/' > client/views/common/appLayout.html
 cat $METEOR_HELPER_PATH/navbar.html | sed 's/MyApp/'"$1"'/' > client/views/common/navbar.html
 cp $METEOR_HELPER_PATH/defaultView.html client/views
-meteor add iron:router ian:bootstrap-3 aldeed:collection2 aldeed:autoform
+meteor add iron:router ian:bootstrap-3 

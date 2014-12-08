@@ -1,5 +1,10 @@
 Template.MyCollectionEdit.helpers({
-
+  onDelete: function () {
+    return function (result) {
+      //when record is deleted, go back to record listing
+      Router.go('MyCollectionList');
+    };
+  },
 });
 
 Template.MyCollectionEdit.events({
