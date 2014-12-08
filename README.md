@@ -11,4 +11,5 @@ export METEOR_HELPER_PATH=~/.meteor-helpers
 
 Once installed, you can:
 + Create an app: ```meteor-create-app <appName>```
++ Add [roles](https://github.com/alanning/meteor-roles) and [accounts-admin-ui](https://github.com/hharnisc/meteor-accounts-admin-ui-bootstrap-3) to your app: ```meteor-add-roles```
 + Add a collection: ```meteor-add-collection <collectionName>```
