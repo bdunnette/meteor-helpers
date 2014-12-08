@@ -1,3 +1,4 @@
 <template name="MyCollectionEdit">
+  <h2>Edit MyCollection:</h2>
   {{> quickForm collection="MyCollection" doc=this id="updateMyCollectionForm" type="update"}} {{> quickRemoveButton collection="MyCollection" _id=this._id onSuccess=onDelete class="btn btn-danger"}}
 </template>
