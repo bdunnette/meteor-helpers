@@ -12,4 +12,4 @@ export METEOR_HELPER_PATH=~/.meteor-helpers
 Once installed, you can:
 + Create an app: ```meteor-create-app <appName>```
 + Add [roles](https://github.com/alanning/meteor-roles) and [accounts-admin-ui](https://github.com/hharnisc/meteor-accounts-admin-ui-bootstrap-3) to your app: ```meteor-add-roles```
-+ Add a collection with [collection2](https://github.com/aldeed/meteor-collection2), [autoform](https://github.com/aldeed/meteor-autoform) and [http-publish](https://github.com/CollectionFS/Meteor-http-publish): ```meteor-add-collection <collectionName>```
++ Add a [collection](http://docs.meteor.com/#/basic/collections) with [collection2](https://github.com/aldeed/meteor-collection2), [autoform](https://github.com/aldeed/meteor-autoform) and [http-publish](https://github.com/CollectionFS/Meteor-http-publish): ```meteor-add-collection <collectionName>```
