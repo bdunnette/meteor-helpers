@@ -1,6 +1,14 @@
 <template name="MyCollectionList">
   <h2>New MyCollection:</h2>
-  {{> quickForm collection="MyCollection" id="insertMyCollectionForm" type="insert"}}
+  {{#autoForm collection="MyCollection" id="insertMyCollectionForm" type="insert" autosave=true class="grid-form"}}
+  <fieldset>
+    <div data-row-span="2">
+      <div data-field-span="1">{{> afQuickField name='title'}}</div>
+      <div data-field-span="1">{{> afQuickField name='description'}}</div>
+    </div>
+  </fieldset>
+  <button type="submit" class="button-green bigger example-link">Add MyCollection</button>
+  {{/autoForm}}
   <ul>
     {{#each this}}
     <li>
