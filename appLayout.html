@@ -1,14 +1,28 @@
 <head>
-<title>MyApp</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MyApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body></body>
 
 <template name="layout">
-{{>navbar}}
-<div class="container-fluid">
-{{>yield}}
-</div>
+  <div class="flakes-frame">
+    {{>navbar}}
+    <div class="flakes-content">
+      <div class="flakes-mobile-top-bar">
+        <a href="" class="logo-wrap">
+          <img src="img/logo.png" height="30px">
+        </a>
+
+        <a href="" class="navigation-expand-target">
+          <img src="img/site-wide/navigation-expand-target.png" height="26px">
+        </a>
+      </div>
+
+      <div class="view-wrap">
+        {{>yield}}
+      </div>
+    </div>
+  </div>
 </template>
