@@ -3,11 +3,11 @@ meteor add aldeed:collection2 aldeed:autoform aldeed:delete-button cfs:http-publ
 collection_regex='s/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g'
 cat $METEOR_HELPER_PATH/collectionTemplate.js | sed "$collection_regex" > lib/collections/$1.js
 cat $METEOR_HELPER_PATH/collectionPublish.js | sed "$collection_regex" > server/$1.js
-cat $METEOR_HELPER_PATH/collectionList.js | sed "$collection_regex" > client/views/$1List.js
-cat $METEOR_HELPER_PATH/collectionList.html | sed "$collection_regex" > client/views/$1List.html
-cat $METEOR_HELPER_PATH/collectionEdit.js | sed "$collection_regex" > client/views/$1Edit.js
-cat $METEOR_HELPER_PATH/collectionEdit.html | sed "$collection_regex" > client/views/$1Edit.html
-cat $METEOR_HELPER_PATH/collectionView.js | sed "$collection_regex" > client/views/$1View.js
-cat $METEOR_HELPER_PATH/collectionView.html | sed "$collection_regex" > client/views/$1View.html
+mkdir client/views/$1
+cat $METEOR_HELPER_PATH/collectionList.js | sed "$collection_regex" > client/views/$1/$1List.js
+cat $METEOR_HELPER_PATH/collectionList.html | sed "$collection_regex" > client/views/$1/$1List.html
+cat $METEOR_HELPER_PATH/collectionEdit.js | sed "$collection_regex" > client/views/$1/$1Edit.js
+cat $METEOR_HELPER_PATH/collectionEdit.html | sed "$collection_regex" > client/views/$1/$1Edit.html
+cat $METEOR_HELPER_PATH/collectionView.js | sed "$collection_regex" > client/views/$1/$1View.js
+cat $METEOR_HELPER_PATH/collectionView.html | sed "$collection_regex" > client/views/$1/$1View.html
 sed -i.bak '/<!--COLLECTIONS-->/a\<li><a href="{{pathFor '"'${1^}List'"'}}">'"${1^}"'</a></li>' client/views/common/navbar.html
-
