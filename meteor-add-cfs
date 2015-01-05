@@ -1,0 +1,5 @@
+#!/bin/bash
+meteor add cfs:standard-packages cfs:gridfs cfs:ui
+collection_regex='s/MyCollection/'"${1^}"'/g;s/myCollection/'"$1"'/g'
+cat $METEOR_HELPER_PATH/cfsTemplate.js | sed "$collection_regex" > lib/collections/$1.js
+cat $METEOR_HELPER_PATH/collectionPublish.js | sed "$collection_regex" > server/$1.js
