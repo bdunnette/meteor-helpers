@@ -3,3 +3,4 @@ meteor add accounts-password alanning:roles ian:accounts-ui-bootstrap-3 mrt:acco
 cp $METEOR_HELPER_PATH/make-first-user-admin.js server
 cp $METEOR_HELPER_PATH/userAdmin.js $METEOR_HELPER_PATH/userAdmin.html client/views
 sed -i.bak '/<!--ACCOUNTS-->/a\<ul class="'"nav navbar-nav navbar-right"'"><li><a href="{{pathFor '"'userAdmin'"'}}">User Admin</a></li>{{>loginButtons}}</ul>' client/views/common/navbar.html
+git add . && git commit -am "adding roles"

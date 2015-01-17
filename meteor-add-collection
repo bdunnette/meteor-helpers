@@ -11,3 +11,4 @@ cat $METEOR_HELPER_PATH/collectionEdit.html | sed "$collection_regex" > client/v
 cat $METEOR_HELPER_PATH/collectionView.js | sed "$collection_regex" > client/views/$1/$1View.js
 cat $METEOR_HELPER_PATH/collectionView.html | sed "$collection_regex" > client/views/$1/$1View.html
 sed -i.bak '/<!--COLLECTIONS-->/a\<li><a href="{{pathFor '"'${1^}List'"'}}">'"${1^}"'</a></li>' client/views/common/navbar.html
+git add . && git commit -am "adding $1 collection"
