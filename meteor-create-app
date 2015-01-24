@@ -6,6 +6,7 @@ cd $1
 mkdir -p client/lib client/views/common client/styles public/images lib/collections server
 mv $1.css client/styles
 rm $1.html $1.js
+cp $METEOR_HELPER_PATH/favicon.png public/images
 cp $METEOR_HELPER_PATH/defaultRoutes.js lib
 cat $METEOR_HELPER_PATH/appLayout.html | sed 's/MyApp/'"$1"'/' > client/views/common/appLayout.html
 cat $METEOR_HELPER_PATH/navbar.html | sed 's/MyApp/'"$1"'/' > client/views/common/navbar.html
