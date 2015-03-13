@@ -3,6 +3,7 @@ echo $METEOR_HELPER_PATH
 echo "Creating app $1"
 meteor create $1
 cd $1
+echo "# $1" > README.md
 mkdir -p client/lib client/views/common client/styles public/images lib/collections server
 mv $1.css client/styles
 rm $1.html $1.js
