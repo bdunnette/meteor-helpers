@@ -13,5 +13,5 @@ cat $METEOR_HELPER_PATH/appLayout.html | sed 's/MyApp/'"$1"'/' > client/views/co
 cat $METEOR_HELPER_PATH/navbar.html | sed 's/MyApp/'"$1"'/' > client/views/common/navbar.html
 cp $METEOR_HELPER_PATH/defaultView.html client/views
 cp $METEOR_HELPER_PATH/startup.js server
-meteor add iron:router twbs:bootstrap fortawesome:fontawesome
+meteor add iron:router twbs:bootstrap fortawesome:fontawesome msavin:mongol
 git init && git add . && git commit -am "initial commit"
