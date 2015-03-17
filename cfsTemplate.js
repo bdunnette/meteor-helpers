@@ -20,6 +20,9 @@ MyCollection.allow({
   },
   remove: function (userId, doc) {
     return true
+  },
+  download: function() {
+    return true;
   }
 });
 
@@ -32,5 +35,8 @@ MyCollection.deny({
   },
   remove: function (userId, doc) {
     return false
+  },
+  download: function() {
+    return false;
   }
 });
